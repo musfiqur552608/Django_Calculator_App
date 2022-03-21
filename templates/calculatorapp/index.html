@@ -38,9 +38,10 @@
                   <strong>Error</strong>
                   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                </div>
-               {% else %}
+               {% endif %}
+               {% if result %}
                <div class="alert alert-success alert-dismissible fade show" role="alert">
-                  <strong>{{ans}}</strong>
+                  <strong>{{q}} = {{ans}}</strong>
                   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                </div>
                {% endif %}

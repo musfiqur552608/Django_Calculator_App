@@ -13,12 +13,14 @@ def submitquery(request):
       dict = {
          "q": q,
          "ans": ans,
-         "error": False
+         "error": False,
+         "result": True
       }
       return render(request, 'index.html', context = dict)
    except:
       dict = {
-         "error" : True
+         "error" : True,
+         "result": False
       }
       return render(request, 'index.html', context = dict)
 
