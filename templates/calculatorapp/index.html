@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <html lang="en">
   <head>
@@ -10,7 +11,7 @@
 
     <title>Calculator</title>
   </head>
-  <body>
+  <body class="navbar-light bg-light">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
          <div class="container-fluid">
             <a class="navbar-brand" href="#">Django Calculator App</a>
@@ -20,15 +21,16 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                     <a class="nav-link" href="#">About</a>
+                     <a class="nav-link" href="#about">About</a>
                   </li>
                </ul>
             </div>
          </div>
       </nav>
-      <div class="container-fluid">
+      <div class="container-fluid" style="margin-bottom: 20rem;">
          <div class="row">
             <div class="col-md-6" style="margin: 1rem auto 0 auto;">
+               <img src="{% static 'logo.jpg' %}" alt="" class="img-fluid" style="width: 100%; ">
                <div class="card">
                   <div class="card-body">
                      <form action="" method="GET">
@@ -36,19 +38,37 @@
                            <input type="search" class="form-control" name="query" id="query">
                         </div>
                         <br>
-                        <input type="submit" class="btn btn-primary">
-                        <input type="reset" class="btn btn-primary">
+                        <div class="row">
+                           <div class="col-md-6">
+                              <input type="submit" class="btn btn-success" style="display: block; margin: 0 auto;">
+                           </div>
+                           <div class="col-md-6">
+                              <input type="reset" class="btn btn-danger" style="display: block; margin: 0 auto;">
+                           </div>
+                        </div>
+                        
                      </form>
                   </div>
                </div>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-md-6" style="margin: 1rem auto 0 auto;">
+               <p class="display-4" id="about" name="about" style="text-align: center;">
+                  About
+               </p>
+               <hr>
+               <p class="lead" style="text-align: center;">
+                  Our Calculator app can perform mathematical operations
+               </p>
             </div>
          </div>
       </div>
 
       <div class="container-fluid">
          <div class="row">
-            <footer class="fixed-bottom navbar-light">
-               <p>Footer</p>
+            <footer class="fixed-bottom" style="background: black; color: #fff; text-align: center;">
+               <p>Thanks For Using Our App</p>
             </footer>
          </div>
       </div>
