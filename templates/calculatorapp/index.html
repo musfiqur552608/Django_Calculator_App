@@ -23,6 +23,9 @@
                   <li class="nav-item">
                      <a class="nav-link" href="#about">About</a>
                   </li>
+                  <li class="nav-item">
+                     <a href="#instructions" class="nav-link">Instructions</a>
+                  </li>
                </ul>
             </div>
          </div>
@@ -33,7 +36,7 @@
                <img src="{% static 'logo.jpg' %}" alt="" class="img-fluid" style="width: 100%; ">
                <div class="card">
                   <div class="card-body">
-                     <form action="" method="GET">
+                     <form action="{% url 'submitquery' %}" method="GET">
                         <div class="form-group">
                            <input type="search" class="form-control" name="query" id="query">
                         </div>
@@ -61,6 +64,22 @@
                <p class="lead" style="text-align: center;">
                   Our Calculator app can perform mathematical operations
                </p>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-md-6" style="margin: 1rem auto 0 auto;">
+               <p class="display-4" id="instructions" name="instructions" style="text-align: center;">
+                  Instructions
+               </p>
+               <hr>
+               <ul class="list-group">
+                  <li class="list-group-item">+ Addition</li>
+                  <li class="list-group-item">- Minus</li>
+                  <li class="list-group-item">* Multiplication</li>
+                  <li class="list-group-item">/ Divition</li>
+                  <li class="list-group-item">// Floor Divition</li>
+                  <li class="list-group-item">( ) Parentheses</li>
+               </ul>
             </div>
          </div>
       </div>
