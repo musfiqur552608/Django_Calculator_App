@@ -8,4 +8,17 @@ def index(request):
 
 def submitquery(request):
    q = request.GET['query']
-   return HttpResponse(q)
+   try:
+      ans = eval(q)
+      dict = {
+         "q": q,
+         "ans": ans,
+         "error": False
+      }
+      return render(request, 'index.html', context = dict)
+   except:
+      dict = {
+         "error" : True
+      }
+      return render(request, 'index.html', context = dict)
+
